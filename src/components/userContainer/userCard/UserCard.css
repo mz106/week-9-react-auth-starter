@@ -1,0 +1,20 @@
+.user-card-container {
+  height: 25%;
+  width: 10%;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.user-card-inner-container {
+  height: 100%;
+  width: 80%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+p {
+  text-align: center;
+}

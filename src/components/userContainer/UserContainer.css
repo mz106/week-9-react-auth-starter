@@ -1,0 +1,5 @@
+.user-inner-container {
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
