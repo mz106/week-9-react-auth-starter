@@ -24,13 +24,25 @@ const UserContainer = ({ isLoggedIn }) => {
         { id: 1, username: "dave" },
         { id: 2, username: "jane" },
         { id: 3, username: "sarah" },
+        { id: 1, username: "dave" },
+        { id: 2, username: "jane" },
+        { id: 3, username: "sarah" },
+        { id: 1, username: "dave" },
+        { id: 2, username: "jane" },
+        { id: 3, username: "sarah" },
+        { id: 1, username: "dave" },
+        { id: 2, username: "jane" },
+        { id: 3, username: "sarah" },
+        { id: 1, username: "dave" },
+        { id: 2, username: "jane" },
+        { id: 3, username: "sarah" },
       ],
     };
   };
 
   return (
-    <div className="flex flex-column container red-border">
-      <div className="flex flex-row inner-container user-inner-container red-border">
+    <div className="flex flex-column container">
+      <div className="flex flex-row inner-container user-inner-container">
         {users.length >= 1 ? (
           users.map((user) => <UserCard user={user} />)
         ) : (

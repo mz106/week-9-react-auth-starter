@@ -26,8 +26,8 @@ const LogOrSign = ({ logOrSignSetters }) => {
   };
 
   return (
-    <div className="flex flex-column container red-border">
-      <div className="flex flex-row inner-container logOrSign-container red-border">
+    <div className="flex flex-column container">
+      <div className="flex flex-row inner-container logOrSign-container">
         <Login
           handleChange={handleChange}
           handleSubmit={handleSubmit}

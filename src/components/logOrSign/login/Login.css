@@ -5,6 +5,7 @@
   justify-content: center;
   border: 2px solid white;
   border-radius: 50px;
+  margin-right: 5px;
 }
 
 .login-form {
