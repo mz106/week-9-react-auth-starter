@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import UserCard from "./userCard/UserCard";
+
 import "./UserContainer.css";
 
 const UserContainer = ({ isLoggedIn }) => {
@@ -28,9 +30,9 @@ const UserContainer = ({ isLoggedIn }) => {
 
   return (
     <div className="flex flex-column container red-border">
-      <div className="flex flex-row inner-container user-container red-border">
+      <div className="flex flex-row inner-container user-inner-container red-border">
         {users.length >= 1 ? (
-          users.map((user) => <p key={user.id}>{user.username}</p>)
+          users.map((user) => <UserCard user={user} />)
         ) : (
           <p>No users</p>
         )}
