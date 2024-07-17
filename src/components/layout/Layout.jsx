@@ -5,10 +5,10 @@ import Footer from "../footer/Footer";
 
 import "./Layout.css";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, loggedUser }) => {
   return (
     <div className="layout">
-      <Header />
+      <Header loggedUser={loggedUser} />
       {children}
       <Footer />
     </div>
