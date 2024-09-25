@@ -4,6 +4,7 @@ import UserCard from "./userCard/UserCard";
 
 import "./UserContainer.css";
 
+// eslint-disable-next-line react/prop-types
 const UserContainer = ({ isLoggedIn }) => {
   const [users, setUsers] = useState([]);
 
@@ -47,7 +48,7 @@ const UserContainer = ({ isLoggedIn }) => {
     <div className="flex flex-column container">
       <div className="flex flex-row inner-container user-inner-container">
         {users.length >= 1 ? (
-          users.map((user) => <UserCard user={user} />)
+          users.map((user) => <UserCard user={user} key={user.id} />)
         ) : (
           <p>No users</p>
         )}
