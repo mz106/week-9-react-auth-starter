@@ -2,14 +2,19 @@ import { useState } from "react";
 
 import "./Signup.css";
 
-const Signup = ({ handleChange, handleSubmit, logOrSignSetters }) => {
+// eslint-disable-next-line react/prop-types
+const Signup = ({ setLoggedUser, setIsLoggedIn }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const handleChange = (e, setter) => {
+    setter(e.target.value);
+  };
+
   const testSign = (username, email, password) => {
     console.log("test is working");
-    console.log(username, password);
+    console.log(username, email, password);
     return {
       message: "success",
       user: {
@@ -19,12 +24,21 @@ const Signup = ({ handleChange, handleSubmit, logOrSignSetters }) => {
     };
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("signup handleSubmit");
+    // loginFetch goes here and replaces testLogin
+    const data = testSign(username, email, password);
+    // setLoggedUser
+    setLoggedUser(data);
+    // setIsLoggedIn
+    setIsLoggedIn(true);
+  };
+
   return (
     <div className="flex flex-column signup">
       <form
-        onSubmit={(e) =>
-          handleSubmit(e, testSign, logOrSignSetters, username, email, password)
-        }
+        onSubmit={(e) => handleSubmit(e)}
         className="flex flex-column signup-form"
       >
         <h3>Signup</h3>

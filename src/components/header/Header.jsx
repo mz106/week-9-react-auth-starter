@@ -1,5 +1,6 @@
 import "./Header.css";
 
+// eslint-disable-next-line react/prop-types
 const Header = ({ loggedUser }) => {
   return (
     <header className="flex flex-column header">
@@ -8,6 +9,7 @@ const Header = ({ loggedUser }) => {
         {!loggedUser ? (
           <p>Please login</p>
         ) : (
+          // eslint-disable-next-line react/prop-types
           <p>Hello {loggedUser.user.username}</p>
         )}
       </div>

@@ -10,20 +10,16 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loggedUser, setLoggedUser] = useState(false);
 
-  const logOrSignSetters = {
-    isLoggedIn,
-    setIsLoggedIn,
-    loggedUser,
-    setLoggedUser,
-  };
-
   return (
     <div className="flex flex-column container">
       <Layout loggedUser={loggedUser}>
         {isLoggedIn ? (
           <UserContainer isLoggedIn={isLoggedIn} />
         ) : (
-          <LogOrSign logOrSignSetters={logOrSignSetters} />
+          <LogOrSign
+            setIsLoggedIn={setIsLoggedIn}
+            setLoggedUser={setLoggedUser}
+          />
         )}
       </Layout>
     </div>
